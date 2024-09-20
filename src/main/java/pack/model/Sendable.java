@@ -1,4 +1,4 @@
 package pack.model;
 
-public interface Sendable {
+public sealed interface Sendable permits Email, SMS {
 }

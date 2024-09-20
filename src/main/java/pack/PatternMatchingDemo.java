@@ -23,7 +23,6 @@ public class PatternMatchingDemo {
         switch (sendable) {
             case Email email -> emailSender.send(email);
             case SMS sms -> smsSender.send(sms);
-            default -> System.out.println("Default case : do nothing");
         }
     }
 }
