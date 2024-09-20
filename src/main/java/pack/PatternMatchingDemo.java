@@ -15,11 +15,11 @@ public class PatternMatchingDemo {
 
     public static void main(String[] args) {
         var patternMatchingDemo = new PatternMatchingDemo();
-        patternMatchingDemo.sendSendable(new Email("john@foo.com", "jane@foo.com", "Greetings", "Hello John from Jane", Instant.now()));
-        patternMatchingDemo.sendSendable(new SMS("tom@foo.com", "sam@foo.com", "Hello Tom from Sam", Instant.now()));
+        patternMatchingDemo.performSend(new Email("john@foo.com", "jane@foo.com", "Greetings", "Hello John from Jane", Instant.now()));
+        patternMatchingDemo.performSend(new SMS("tom@foo.com", "sam@foo.com", "Hello Tom from Sam", Instant.now()));
     }
 
-    private void sendSendable(Sendable sendable) {
+    private void performSend(Sendable sendable) {
         switch (sendable) {
             case Email email -> emailSender.send(email);
             case SMS sms -> smsSender.send(sms);
