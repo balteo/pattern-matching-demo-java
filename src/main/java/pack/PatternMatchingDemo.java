@@ -16,7 +16,7 @@ public class PatternMatchingDemo {
     public static void main(String[] args) {
         var patternMatchingDemo = new PatternMatchingDemo();
         patternMatchingDemo.performSend(new Email("john@foo.com", "jane@foo.com", "Greetings", "Hello John from Jane", Instant.now()));
-        patternMatchingDemo.performSend(new SMS("tom@foo.com", "sam@foo.com", "Hello Tom from Sam", Instant.now()));
+        patternMatchingDemo.performSend(new SMS("+33612345678", "+33687654321", "Hello Tom from Sam", Instant.now()));
     }
 
     private void performSend(Sendable sendable) {
